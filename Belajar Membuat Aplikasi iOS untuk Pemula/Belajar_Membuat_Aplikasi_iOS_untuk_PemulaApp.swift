@@ -11,7 +11,16 @@ import SwiftUI
 struct Belajar_Membuat_Aplikasi_iOS_untuk_PemulaApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                HomeView()
+                    .tabItem {
+                        Label("Home", systemImage: "house")
+                    }
+                AboutView()
+                    .tabItem {
+                        Label("About", systemImage: "person.circle")
+                    }
+            }
         }
     }
 }
