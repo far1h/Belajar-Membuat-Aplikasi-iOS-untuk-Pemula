@@ -9,30 +9,19 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var doaService = DoaService()
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    @FetchRequest(
+        entity: DoaData.entity(),
+        sortDescriptors: []
+    ) var favorites: FetchedResults<DoaData>
+    
     
     var body: some View {
-        NavigationView {
-            List(doaService.doaList.prefix(100)) { doa in
-                NavigationLink(destination: DetailView(doa: doa)) {
-                    HStack(alignment: .center, spacing: 10) {
-                        Image(systemName: "book")
-                            .resizable()
-                            .frame(width: 20, height: 20)
-                            .foregroundColor(.blue)
-                            .padding(4)
-                        VStack(alignment: .leading) {
-                            Text(doa.doa).font(.headline)
-                            if let verse = doa.ayat {
-                                Text("“\(verse)”").font(.subheadline).lineLimit(1)
-                            }
-                        }
-                        .padding(.vertical, 4)
-                    }
-                }
+        DoaListView(title: "Doa Harian", doas: doaService.doaList, favorites: Array(favorites))
+            .onAppear {
+                doaService.fetchData()
             }
-            .navigationTitle("Doa Harian")
-            .onAppear { doaService.fetchData() }
-        }
     }
 }
 
