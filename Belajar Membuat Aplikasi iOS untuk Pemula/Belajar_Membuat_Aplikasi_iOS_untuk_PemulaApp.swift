@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct Belajar_Membuat_Aplikasi_iOS_untuk_PemulaApp: App {
+    @StateObject private var dataController = DataController()
+    
     var body: some Scene {
         WindowGroup {
             TabView {
@@ -16,11 +18,17 @@ struct Belajar_Membuat_Aplikasi_iOS_untuk_PemulaApp: App {
                     .tabItem {
                         Label("Home", systemImage: "house")
                     }
+                FavoriteView()
+                    .tabItem {
+                        Label("Favorites", systemImage: "heart")
+                    }
+
                 AboutView()
                     .tabItem {
                         Label("About", systemImage: "person.circle")
                     }
             }
+            .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }
