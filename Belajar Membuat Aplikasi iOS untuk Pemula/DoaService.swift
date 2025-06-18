@@ -7,24 +7,30 @@
 
 import Foundation
 
-class DoaService {
-    func fetchDoa(completion: @escaping (Result<[Doa], Error>) -> Void) {
-        guard let url = URL(string: "https://doa-doa-api-ahmadramadhan.fly.dev/api") else { return }
-
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            if let error = error {
-                DispatchQueue.main.async { completion(.failure(error)) }
-                return
+class DoaService: ObservableObject {
+    
+    @Published var doaList: [Doa] = []
+    
+    func fetchData(){
+        if let url = URL(string: "https://doa-doa-api-ahmadramadhan.fly.dev/api") {
+            let session = URLSession(configuration: .default)
+            let task = session.dataTask(with: url) { data, response, error in
+                if error == nil {
+                    let decoder = JSONDecoder()
+                    if let safeData = data {
+                        do {
+                            let decodedData = try decoder.decode([Doa].self, from: safeData)
+                            DispatchQueue.main.async {
+                                self.doaList = decodedData
+                            }
+                        } catch {
+                            print(error)
+                        }
+                        
+                    }
+                }
             }
-
-            guard let data = data else { return }
-
-            do {
-                let doaList = try JSONDecoder().decode([Doa].self, from: data)
-                DispatchQueue.main.async { completion(.success(doaList)) }
-            } catch {
-                DispatchQueue.main.async { completion(.failure(error)) }
-            }
-        }.resume()
+            task.resume()
+        }
     }
 }

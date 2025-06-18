@@ -8,12 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		9124E8362DDFB78900FE58FD /* Belajar_Membuat_Aplikasi_iOS_untuk_PemulaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124E8352DDFB78900FE58FD /* Belajar_Membuat_Aplikasi_iOS_untuk_PemulaApp.swift */; };
-		9124E8382DDFB78900FE58FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124E8372DDFB78900FE58FD /* ContentView.swift */; };
 		9124E83A2DDFB78A00FE58FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9124E8392DDFB78A00FE58FD /* Assets.xcassets */; };
 		9124E83D2DDFB78A00FE58FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9124E83C2DDFB78A00FE58FD /* Preview Assets.xcassets */; };
 		9124E8442DDFC08100FE58FD /* Doa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124E8432DDFC08100FE58FD /* Doa.swift */; };
 		9124E8462DDFC09F00FE58FD /* DoaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124E8452DDFC09F00FE58FD /* DoaService.swift */; };
-		9124E8482DDFC0DB00FE58FD /* DoaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124E8472DDFC0DB00FE58FD /* DoaViewModel.swift */; };
 		9124E84C2DDFC1D600FE58FD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124E84B2DDFC1D600FE58FD /* HomeView.swift */; };
 		9124E84E2DDFC1FB00FE58FD /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124E84D2DDFC1FB00FE58FD /* DetailView.swift */; };
 		9124E8502DDFC21500FE58FD /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124E84F2DDFC21500FE58FD /* AboutView.swift */; };
@@ -22,12 +20,10 @@
 /* Begin PBXFileReference section */
 		9124E8322DDFB78900FE58FD /* Belajar Membuat Aplikasi iOS untuk Pemula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Belajar Membuat Aplikasi iOS untuk Pemula.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9124E8352DDFB78900FE58FD /* Belajar_Membuat_Aplikasi_iOS_untuk_PemulaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Belajar_Membuat_Aplikasi_iOS_untuk_PemulaApp.swift; sourceTree = "<group>"; };
-		9124E8372DDFB78900FE58FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9124E8392DDFB78A00FE58FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9124E83C2DDFB78A00FE58FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9124E8432DDFC08100FE58FD /* Doa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doa.swift; sourceTree = "<group>"; };
 		9124E8452DDFC09F00FE58FD /* DoaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoaService.swift; sourceTree = "<group>"; };
-		9124E8472DDFC0DB00FE58FD /* DoaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoaViewModel.swift; sourceTree = "<group>"; };
 		9124E84B2DDFC1D600FE58FD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9124E84D2DDFC1FB00FE58FD /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		9124E84F2DDFC21500FE58FD /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
@@ -65,12 +61,10 @@
 			children = (
 				9124E8352DDFB78900FE58FD /* Belajar_Membuat_Aplikasi_iOS_untuk_PemulaApp.swift */,
 				9124E8432DDFC08100FE58FD /* Doa.swift */,
-				9124E8372DDFB78900FE58FD /* ContentView.swift */,
 				9124E8392DDFB78A00FE58FD /* Assets.xcassets */,
 				9124E83B2DDFB78A00FE58FD /* Preview Content */,
 				9124E8452DDFC09F00FE58FD /* DoaService.swift */,
 				9124E84B2DDFC1D600FE58FD /* HomeView.swift */,
-				9124E8472DDFC0DB00FE58FD /* DoaViewModel.swift */,
 				9124E84D2DDFC1FB00FE58FD /* DetailView.swift */,
 				9124E84F2DDFC21500FE58FD /* AboutView.swift */,
 			);
@@ -157,8 +151,6 @@
 			files = (
 				9124E8502DDFC21500FE58FD /* AboutView.swift in Sources */,
 				9124E8462DDFC09F00FE58FD /* DoaService.swift in Sources */,
-				9124E8482DDFC0DB00FE58FD /* DoaViewModel.swift in Sources */,
-				9124E8382DDFB78900FE58FD /* ContentView.swift in Sources */,
 				9124E84E2DDFC1FB00FE58FD /* DetailView.swift in Sources */,
 				9124E84C2DDFC1D600FE58FD /* HomeView.swift in Sources */,
 				9124E8362DDFB78900FE58FD /* Belajar_Membuat_Aplikasi_iOS_untuk_PemulaApp.swift in Sources */,

@@ -13,7 +13,6 @@ struct DetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
-                Text(doa.doa).font(.title).bold()
                 if let verse = doa.ayat {
                     Text("“\(verse)”").font(.title3).italic().multilineTextAlignment(.center)
                 }
@@ -24,7 +23,7 @@ struct DetailView: View {
             }
             .padding()
         }
-        .navigationTitle("Detail Doa")
+        .navigationTitle(doa.doa)
     }
 }
 

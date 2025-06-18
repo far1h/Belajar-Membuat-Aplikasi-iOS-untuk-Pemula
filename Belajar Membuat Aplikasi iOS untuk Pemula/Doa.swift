@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Doa: Identifiable, Codable {
+struct Doa: Identifiable, Decodable {
     let id: String
     let doa: String
     let ayat: String?
